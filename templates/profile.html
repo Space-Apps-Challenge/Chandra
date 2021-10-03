@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chandra</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+
+
+    <body>
+        <div class="scanlines"></div>
+        <div class="scanline"></div>
+        <div class="flicker"></div>
+        <div class="body">
+          <pre>
+      
+      <a href="index.html" class="ascii-art"></a><titles>
+      #    ___             _         __    _______                __        
+      #   / _ \_______    (_)__ ____/ /_  / ___/ /  ___ ____  ___/ /______ _
+      #  / ___/ __/ _ \  / / -_) __/ __/ / /__/ _ \/ _ `/ _ \/ _  / __/ _ `/
+      # /_/  /_/  \___/_/ /\__/\__/\__/  \___/_//_/\_,_/_//_/\_,_/_/  \_,_/ 
+      #              |___/                                                  
+      #
+      #              <a href="profile">Profile</a>        <a href="https://github.com/Space-Apps-Challenge/chandra-website">GitHub</a>        <a href="logs_writer">New Log</a>        <a href="logs">View Logs</a>
+
+    </titles></a>
+
+        <br><br>Hello, {{ username }}
+
+        <br><br>Email: {{ email }}
+        <div id="log">        
+            <br><br>Logs: {% for user_profile_log in user_logs_profile %}
+        
+            <p style="border-style:dashed; padding: 35px 70px; margin: 35px;">{{ user_profile_log['username'] }} {{ user_profile_log['time'] }} <br><br> <b>{{ user_profile_log['title'] }}</b> <br><br> {{ user_profile_log['body'] }}</p>
+
+                {% endfor %}
+        </div>
+        </pre>
+    </body>
+
+</html>
